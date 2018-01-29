@@ -1,6 +1,9 @@
 <div style="text-align:center">
-    <h1>
-        Welcome to {{ title }}!
-    </h1>
+    <h1>{{ title }}</h1>
 </div>
-<div *ngFor="let item of items">{{item}}</div>
+<div *ngFor="let item of items, let i=index">
+    <div>Type: {{item.type}}</div>
+    <div>Name: {{item.name}}</div>
+    <div>Age: {{item.age}}</div>
+    <div *ngIf="i!=items.length-1">--------------------</div>
+</div>

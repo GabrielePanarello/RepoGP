@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Characters } from './characters';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Work';
-  items: string[] = [];
+  items: Characters[] = [];
 
-  constructor(){
-    this.items.push("pippo");
-    this.items.push("pippuzzo");
-    this.items.push("dino");
-    this.items.push("gino");
+  constructor() {
+    this.title = "Hello Classe";
+    this.items.push({type:"DC", name:"Flash", age:20});
+    this.items.push({type:"DC", name:"Arrow", age:21});
   }
 }
