@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
-import { Characters } from './characters';
+import { Characters } from '../characters';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'list',
+  templateUrl: './list.component.html'
 })
-export class AppComponent {
+export class ListComponent {
   title = 'Work';
   items: Characters[] = [];
   value: string;
 
   constructor() {
-    this.title = "Hello Classe";
+    this.title = "Hello Class";
     this.items.push({ type: "DC", name: "Flash", age: 20 });
     this.items.push({ type: "DC", name: "Arrow", age: 21 });
   }

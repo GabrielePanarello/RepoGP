@@ -1,0 +1,6 @@
+<div *ngFor="let item of items, let i=index">
+    <div>Type: {{item.type}}</div>
+    <div>Name: {{item.name}}</div>
+    <div>Age: {{item.age}}</div>
+    <div *ngIf="i!=items.length-1">--------------------</div>
+</div>
