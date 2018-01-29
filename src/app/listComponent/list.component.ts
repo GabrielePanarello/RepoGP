@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Characters } from '../characters';
 
 @Component({
@@ -6,22 +6,8 @@ import { Characters } from '../characters';
   templateUrl: './list.component.html'
 })
 export class ListComponent {
-  title = 'Work';
-  items: Characters[] = [];
-  value: string;
+  
+  @Input()
+  items: Characters[];
 
-  constructor() {
-    this.title = "Hello Class";
-    this.items.push({ type: "DC", name: "Flash", age: 20 });
-    this.items.push({ type: "DC", name: "Arrow", age: 21 });
-  }
-
-  showValue() {
-    if (this.value != null) {
-      alert("Valore " + this.value);
-    }
-    else {
-      alert("INSERISCI");
-    }
-  }
 }
