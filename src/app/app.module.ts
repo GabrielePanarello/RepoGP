@@ -18,4 +18,5 @@ import { ListComponent } from './listComponent/list.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
