@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'Work';
   items: Characters[] = [];
   value: string;
-  characterSelected: Characters;
+  
 
   constructor() {
     this.title = "Hello Classe";
@@ -26,10 +26,6 @@ export class AppComponent {
     else {
       alert("Inserisci");
     }
-  }
-
-  showCharacter(item:Characters){
-    this.characterSelected = item;
   }
 
 }
