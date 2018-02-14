@@ -10,6 +10,7 @@ import { ComunicatorService } from '../comunicator.service';
 export class DetailComponent{
 
   characterSelected: Characters;
+  
   constructor(private comunicatorService : ComunicatorService){
     this.comunicatorService.mySubject$.subscribe ((newValue: Characters) => {
       this.characterSelected = newValue;

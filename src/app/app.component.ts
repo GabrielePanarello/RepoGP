@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Characters } from './characters';
 import { ListService } from './list.service';
+import { AfterViewComponent } from './after-view/after-view.component';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ export class AppComponent {
   title = 'Work';
   items: Characters[] = [];
   value: string;
+  @ViewChild(AfterViewComponent) viewChild: AfterViewComponent;
   
 
   constructor() {
@@ -28,4 +30,11 @@ export class AppComponent {
     }
   }
 
+  ngAfterViewInit(){
+    this.value = this.viewChild.value;
+  }
+
+  ngAfterViewChecked(){
+    this.value = this.viewChild.value;
+  }
 }
